@@ -1,0 +1,24 @@
+{
+  "name": "publications",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/publications/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "publications:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "publications:build:development"
+        },
+        "production": {
+          "buildTarget": "publications:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
